@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+    <div class="mt-5">
+        <h3>Add User</h3>
+        <form style="width: 400px;" method="POST" action="/users/<%= user._id %>">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="<%= user.name %>">
+            </div>
+            <div class="mb-3">
+                <label for="surname" class="form-label">Surname</label>
+                <input type="text" class="form-control" id="surname" name="surname" value="<%= user.surname %>">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">email</label>
+                <input type="email" class="form-control" id="email" name="email" value="<%= user.email %>">
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">address</label>
+                <input type="text" class="form-control" id="address" name="address" value="<%= user.address %>">
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+    <%- include('partials/footer') %>
